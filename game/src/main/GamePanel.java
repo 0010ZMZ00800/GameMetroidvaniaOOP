@@ -18,7 +18,7 @@ public class GamePanel extends JPanel {
     private long lastTime = System.currentTimeMillis(); 
     
 
-    public GamePanel() {
+    public GamePanel(Game game) {
         addKeyListener(keyboardInput);
         addMouseListener(mouseInput);
         addMouseMotionListener(mouseInput);
