@@ -16,12 +16,13 @@ public class GamePanel extends JPanel {
     private MouseInputs mouseInput = new MouseInputs(this);
     private KeyboardInputs keyboardInput = new KeyboardInputs(this);
     private long lastTime = System.currentTimeMillis(); 
+    private Game game;
     
-
     public GamePanel(Game game) {
         addKeyListener(keyboardInput);
         addMouseListener(mouseInput);
         addMouseMotionListener(mouseInput);
+        this.game = game;
         setPanelSize();
         setFocusable(true);
         requestFocus();
