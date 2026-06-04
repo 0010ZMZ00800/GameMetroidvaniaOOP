@@ -38,10 +38,6 @@ public class GamePanel extends JPanel {
         setMaximumSize(size);
     }
 
-    public void setMoving(int direction){
-        
-    }
-
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
