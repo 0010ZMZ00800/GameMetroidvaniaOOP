@@ -1,21 +1,38 @@
 package main;
 
+import Entities.Player;
+
 public class Game implements Runnable {
     private GameWindow gameWindow;
     private GamePanel gamePanel;
     private Thread gameThread;
     private final int fpsSet = 120;
 
+    private Player player;
+
     public Game(){
         gamePanel = new GamePanel();
         gameWindow = new GameWindow(gamePanel);
         gamePanel.requestFocus();
+        initClasses();
         startGameLoop();
+    }
+
+    private void initClasses(){
+        player = new Player(200,200);
     }
 
     private void startGameLoop() {
         gameThread = new Thread(this);
         gameThread.start();
+    }
+
+    public void update(){
+        player.update();
+    }
+
+    public void render(Graphics g){
+        
     }
 
     @Override
