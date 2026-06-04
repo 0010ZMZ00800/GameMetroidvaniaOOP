@@ -14,6 +14,13 @@ public class GameWindow {
         jframe.setResizable(false);
         jframe.pack();
         jframe.setVisible(true);
+        jframe.addWindowFocusListener(new WindowFocusListener(){
+            @Override
+            public void windowLostFocus(WindowEvent e){
+                gamePanel.getGame().windowFocusLost();
+            }
+
+        });
     }
     
 }
