@@ -21,22 +21,12 @@ public class GamePanel extends JPanel {
     
 
     public GamePanel() {
-        importImg();
         addKeyListener(keyboardInput);
         addMouseListener(mouseInput);
         addMouseMotionListener(mouseInput);
         setPanelSize();
         setFocusable(true);
         requestFocus();
-    }
-
-    private void importImg() {
-        InputStream is = getClass().getResourceAsStream("/res/player_sprites.png");
-        try {
-            img = ImageIO.read(is);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void setPanelSize() {
