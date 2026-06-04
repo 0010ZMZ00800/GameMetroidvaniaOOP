@@ -15,9 +15,7 @@ public class GamePanel extends JPanel {
 
     private MouseInputs mouseInput = new MouseInputs(this);
     private KeyboardInputs keyboardInput = new KeyboardInputs(this);
-    private float xDelta = 10, yDelta = 10;
-    private long lastTime = System.currentTimeMillis();
-    private BufferedImage img, subImg;
+    private long lastTime = System.currentTimeMillis(); 
     
 
     public GamePanel() {
