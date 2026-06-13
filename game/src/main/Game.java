@@ -4,6 +4,7 @@ import entities.Player;
 import java.awt.Graphics;
 import levels.LevelManager;
 
+
 public class Game implements Runnable {
     private GameWindow gameWindow;
     private GamePanel gamePanel;
@@ -104,6 +105,7 @@ public class Game implements Runnable {
 
     }
 
+    // get Player
     public Player getPlayer() {
         return player;
     }
